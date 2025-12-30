@@ -30,8 +30,15 @@
 
     <section class="projects-container">
       <h2 class="section-title">Projelerim</h2>
-      <div class="projects-grid">
-        <div class="project-card">
+
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">Hepsi</button>
+        <button class="filter-btn" data-filter="html-css">HTML/CSS</button>
+        <button class="filter-btn" data-filter="c-lang">C</button>
+      </div>
+
+      <div class="projects-grid" id="projects-grid">
+        <div class="project-card" data-category="html-css">
           <h3>Portfolyo Sitesi</h3>
           <p>
             Şu anda içerisinde bulunduğunuz, html ve css kullanılarak hazırlanan
@@ -49,13 +56,9 @@
           ></a>
         </div>
 
-        <div class="project-card">
+        <div class="project-card" data-category="html-css">
           <h3>Sosyal Medya İkonları</h3>
-          <p>
-            Sosyal medya ikonlarının yan yana sıralandığı, her ikonun üstüne
-            gelindiğinde minik bir animasyonun olduğu ve tıklandığında ilgili
-            siteye aktaran sistem.
-          </p>
+          <p>Animasyonlu sosyal medya ikonları sistemi.</p>
           <div class="project-tags">
             <span>HTML</span>
             <span>CSS</span>
@@ -64,10 +67,25 @@
             href="https://github.com/gurbuzsuleyman/social-media-icons"
             target="_blank"
             class="project-btn"
-          >
-            Kodları İncele <i class="fa-solid fa-arrow-right"></i
+            >Kodları İncele <i class="fa-solid fa-arrow-right"></i
           ></a>
         </div>
+      </div>
+
+      <div
+        id="no-project-message"
+        style="
+          display: none;
+          padding: 50px;
+          border-radius: 15px;
+          margin-top: 20px;
+        "
+      >
+        <i
+          class="fa-solid fa-code"
+          style="font-size: 40px; color: #71e7ea; margin-bottom: 15px"
+        ></i>
+        <p>C dili ile ilgili henüz yüklediğim bir projem yok!</p>
       </div>
     </section>
 
@@ -80,5 +98,6 @@
         >
       </p>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>
